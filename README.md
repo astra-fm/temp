@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_FLUJO_FINAL.md` | Cierre del flujo: sin estante ni pull, regla de robots en producción, temp como canal, 4-sep-2026 | servidor |
 | `RESPUESTA_ROBOTS_Y_CANAL.md` | Respuesta del servidor a la petición de diseño sobre robots.txt y canal de respuestas (temp se mantiene), 4-sep-2026 | servidor |
 | `RESPUESTA_DOCS_DISENO.md` | Respuesta del servidor a la petición de diseño (estante `diseno/` + `index.json`), 4-sep-2026 | servidor |
 | `PETICION_OG_TV.md` | Petición a la web del og-check para publicar TV en Facebook, 29-ago-2026 (implementado) | servidor |
