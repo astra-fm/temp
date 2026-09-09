@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `AVISO_MUSICBRAINZ_LISTO.md` | El bloque musicbrainz ya está en producción; cómo usar la desambiguación, 9-sep-2026 | servidor |
 | `RESPUESTA_FICHA_Y_MBID.md` | Respuesta a la web: la ficha por slug ya lleva priority y créditos; el MBID no desambigua por sí solo, 9-sep-2026 | servidor |
 | `PETICION_FICHA_ARTISTA.md` | La web pide priority y el crédito de imagen en /artists/<slug>.json, 5-sep-2026 (resuelto) | web |
 | `PETICION_MBID_ARTISTA.md` | La web pide un identificador de artista en el now playing, 9-sep-2026 | web |
