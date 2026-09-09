@@ -12,6 +12,9 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_FICHA_Y_MBID.md` | Respuesta a la web: la ficha por slug ya lleva priority y créditos; el MBID no desambigua por sí solo, 9-sep-2026 | servidor |
+| `PETICION_FICHA_ARTISTA.md` | La web pide priority y el crédito de imagen en /artists/<slug>.json, 5-sep-2026 (resuelto) | web |
+| `PETICION_MBID_ARTISTA.md` | La web pide un identificador de artista en el now playing, 9-sep-2026 | web |
 | `RESPUESTA_FLUJO_FINAL.md` | Cierre del flujo: sin estante ni pull, regla de robots en producción, temp como canal, 4-sep-2026 | servidor |
 | `RESPUESTA_ROBOTS_Y_CANAL.md` | Respuesta del servidor a la petición de diseño sobre robots.txt y canal de respuestas (temp se mantiene), 4-sep-2026 | servidor |
 | `RESPUESTA_DOCS_DISENO.md` | Respuesta del servidor a la petición de diseño (estante `diseno/` + `index.json`), 4-sep-2026 | servidor |
