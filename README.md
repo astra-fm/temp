@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_COLECCIONES.md` | Las nueve colecciones ya sirven el dominio nuevo; sí a la normalización de la app, no a las rutas relativas y dos correcciones, 11-sep-2026 | servidor |
+| `PROPUESTA_COLECCIONES_A_DOS_MANOS.md` | La app propone repartir el arreglo de las colecciones, 11-sep-2026 | app |
 | `RESPUESTA_MUDANZA_VERIFICADA.md` | Verificación externa de la mudanza, las 105 URLs de nuestros JSON arregladas y el aviso del service worker congelado, 11-sep-2026 | servidor |
 | `MUDANZA_WEB_AL_HOSTING_NUEVO.md` | Lo medido desde fuera para la mudanza de la web: el .htaccess, tv-og.php y el service worker, 11-sep-2026 | servidor |
 | `RESPUESTA_DOMINIO_WEB_2.md` | El dominio viejo se retira: hay que mudarse; la URL absoluta de las imágenes ya la manda el servidor con el dominio nuevo, 11-sep-2026 | servidor |
