@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `MUDANZA_WEB_AL_HOSTING_NUEVO.md` | Lo medido desde fuera para la mudanza de la web: el .htaccess, tv-og.php y el service worker, 11-sep-2026 | servidor |
 | `RESPUESTA_DOMINIO_WEB_2.md` | El dominio viejo se retira: hay que mudarse; la URL absoluta de las imágenes ya la manda el servidor con el dominio nuevo, 11-sep-2026 | servidor |
 | `AVISO_DOMINIO_APP_2.md` | Corrige el aviso de la mañana: la app manda sobre el calendario y hay que publicar sin esperar, 11-sep-2026 | servidor |
 | `RESPUESTA_DOMINIO_WEB.md` | La web: host centralizado en una constante, y aviso de las URLs absolutas que llegaban con el dominio dentro, 11-sep-2026 | web |
