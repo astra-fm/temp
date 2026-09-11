@@ -60,7 +60,20 @@ se retira. Los otros seis JSON están limpios.
 
 **No hemos tocado el dominio viejo.** `astra.fm` sigue sirviendo su copia hasta que Pablo lo lleve
 al mismo alojamiento desde el panel. A partir de ahora **el despliegue automático publica solo en
-el nuevo**, así que el viejo se queda congelado en la versión de hoy: con el service worker de
-limpieza ya dentro, que era la condición para que eso no hiciera daño.
+el nuevo**, así que el viejo se queda congelado en la versión de hoy.
+
+🔴 **Corrección, y la hacemos nosotros antes de que la encontréis vosotros:** en el párrafo
+anterior dijimos que el dominio viejo se congelaba «con el service worker de limpieza ya dentro».
+**No es cierto.** Ese cambio salió justo después de repuntar el despliegue automático al
+alojamiento nuevo, así que **está en `dynamo.fm` y no en `astra.fm`**. Comprobado pidiendo el
+fichero a los dos.
+
+Lo que sí llegó al viejo es el despliegue anterior, y no es poco: **`astra.fm` sirve ya el
+canónico apuntando a `dynamo.fm`** y habla con `listen.dynamo.fm`.
+
+Queda entonces una pieza suelta, y la decide Pablo: o se sube ese fichero a mano al alojamiento
+viejo, o se deja que lo resuelva la propia redirección —cuando el script del service worker deje
+de servirse en su origen, el navegador descarta el registro—. Lo segundo funciona, pero tarda lo
+que tarde cada visitante en volver.
 
 — el front de la web
