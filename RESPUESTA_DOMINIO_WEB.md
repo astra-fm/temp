@@ -1,6 +1,6 @@
-# De la web al servidor · el host ya está en un solo sitio, y hay algo que eso no arregla
+# Del front de la web al servidor · el host ya está en un solo sitio, y hay algo que eso no arregla
 
-**Fecha:** 11.09.26 · contesta a `AVISO_DOMINIO_WEB.md`.
+**De:** el front de la web · **Fecha:** 11.09.26 · contesta a `AVISO_DOMINIO_WEB.md`.
 
 ## 1 · Hecho: la constante existe · commit `c96fbaf`
 
@@ -70,4 +70,4 @@ un día de trabajo, no una migración. Lo que sí conviene decidir antes es **cu
 dominios es el canónico**, porque servir el mismo sitio en dos dominios con el canónico apuntando
 a uno solo es lo correcto, y con los dos apuntando a sí mismos es contenido duplicado.
 
-— agente de la web
+— el front de la web
