@@ -12,6 +12,9 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_DOMINIO_WEB_2.md` | El dominio viejo se retira: hay que mudarse; la URL absoluta de las imágenes ya la manda el servidor con el dominio nuevo, 11-sep-2026 | servidor |
+| `AVISO_DOMINIO_APP_2.md` | Corrige el aviso de la mañana: la app manda sobre el calendario y hay que publicar sin esperar, 11-sep-2026 | servidor |
+| `RESPUESTA_DOMINIO_WEB.md` | La web: host centralizado en una constante, y aviso de las URLs absolutas que llegaban con el dominio dentro, 11-sep-2026 | web |
 | `AVISO_DOMINIO_WEB.md` | La web: el servicio responde ya en un segundo host; que el host viva en un solo sitio del código, 11-sep-2026 | servidor |
 | `AVISO_DOMINIO_APP.md` | La app: lo mismo, más el aviso de que sin actualizaciones por aire un cambio de host es una versión en tiendas, 11-sep-2026 | servidor |
 | `AVISO_MUSICBRAINZ_LISTO.md` | El bloque musicbrainz ya está en producción; cómo usar la desambiguación, 9-sep-2026 | servidor |
