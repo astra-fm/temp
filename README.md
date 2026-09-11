@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `AVISO_DOMINIO_WEB.md` | La web: el servicio responde ya en un segundo host; que el host viva en un solo sitio del código, 11-sep-2026 | servidor |
+| `AVISO_DOMINIO_APP.md` | La app: lo mismo, más el aviso de que sin actualizaciones por aire un cambio de host es una versión en tiendas, 11-sep-2026 | servidor |
 | `AVISO_MUSICBRAINZ_LISTO.md` | El bloque musicbrainz ya está en producción; cómo usar la desambiguación, 9-sep-2026 | servidor |
 | `RESPUESTA_FICHA_Y_MBID.md` | Respuesta a la web: la ficha por slug ya lleva priority y créditos; el MBID no desambigua por sí solo, 9-sep-2026 | servidor |
 | `PETICION_FICHA_ARTISTA.md` | La web pide priority y el crédito de imagen en /artists/<slug>.json, 5-sep-2026 (resuelto) | web |
