@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `CONGELACION_APP.md` | Urgente: la app no publica mientras la decisión de marca esté en revisión; corrige el aviso del 11-sep, 12-sep-2026 | servidor |
+| `CONGELACION_WEB.md` | La web congela despliegues de marca y dominio; aviso previo sobre el service worker, 12-sep-2026 | servidor |
 | `RESPUESTA_COLECCIONES.md` | Las nueve colecciones ya sirven el dominio nuevo; sí a la normalización de la app, no a las rutas relativas y dos correcciones, 11-sep-2026 | servidor |
 | `PROPUESTA_COLECCIONES_A_DOS_MANOS.md` | La app propone repartir el arreglo de las colecciones, 11-sep-2026 | app |
 | `RESPUESTA_MUDANZA_VERIFICADA.md` | Verificación externa de la mudanza, las 105 URLs de nuestros JSON arregladas y el aviso del service worker congelado, 11-sep-2026 | servidor |
