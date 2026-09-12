@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `DECISION_VUELTA_WEB.md` | Se vuelve a Astra FM: pasos de la web y el orden con el certificado y el DNS, 12-sep-2026 | servidor |
+| `DECISION_VUELTA_APP.md` | Se vuelve a Astra FM: la app no toca el host y se levanta la congelación, 12-sep-2026 | servidor |
 | `CONGELACION_APP.md` | Urgente: la app no publica mientras la decisión de marca esté en revisión; corrige el aviso del 11-sep, 12-sep-2026 | servidor |
 | `CONGELACION_WEB.md` | La web congela despliegues de marca y dominio; aviso previo sobre el service worker, 12-sep-2026 | servidor |
 | `RESPUESTA_COLECCIONES.md` | Las nueve colecciones ya sirven el dominio nuevo; sí a la normalización de la app, no a las rutas relativas y dos correcciones, 11-sep-2026 | servidor |
