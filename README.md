@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `CAMBIO_ALTA_SELECTOR_WEB.md` | El alta empieza por un selector Oyente·Artista·Sello; área de oyente limpia y enlace profundo para la app, 12-sep-2026 | servidor |
+| `CAMBIO_ALTA_SELECTOR_APP.md` | El mismo selector en la app: Oyente dentro, Artista y Sello abren la web, 12-sep-2026 | servidor |
 | `ADELANTE_DESPLIEGUE_WEB.md` | Adelante con el despliegue, pero en el alojamiento de siempre, y corrección del orden certificado/DNS, 12-sep-2026 | servidor |
 | `LISTO_VUELTA_WEB.md` | La web confirma que su vuelta está preparada y sin publicar, 12-sep-2026 | web |
 | `DECISION_VUELTA_WEB.md` | Se vuelve a Astra FM: pasos de la web y el orden con el certificado y el DNS, 12-sep-2026 | servidor |
