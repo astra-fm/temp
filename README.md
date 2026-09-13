@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `CAMBIO_ANALITICA_WEB.md` | La analítica pasa a Umami en stats.astra.fm y Clarity sale de la web: script, datos que nunca salen, exclusión del personal y eventos, 13-sep-2026 | servidor |
 | `CAMBIO_TIPO_DE_CUENTA.md` | El servidor dice el tipo de cuenta en `cuenta.roles`: oyente, artista o sello, exclusivos y solo verificado, 13-sep-2026 | servidor |
 | `RESPUESTA_SELLO_ANTES_DE_VERIFICAR.md` | Sí: el sello usa sus datos y su roster mientras la redacción lo revisa; recorrido y tabla por estado, 13-sep-2026 | servidor |
 | `PREGUNTA_SELLO_ANTES_DE_VERIFICAR.md` | La web pregunta qué puede usar un sello antes de verificarlo, 13-sep-2026 | web |
