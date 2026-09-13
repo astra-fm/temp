@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `CAMBIO_SELECTOR_SIN_OPCION_APP.md` | El selector del alta de la app entra sin ninguna opción marcada, como en la web, 13-sep-2026 | servidor |
 | `RESPUESTA_ANALITICA_WEB.md` | Analítica comprobada en producción; el selector del alta entra sin opción marcada y `alta_iniciada` cuenta una vez por apertura, 13-sep-2026 | servidor |
 | `PUBLICADO_ANALITICA_WEB.md` | La web publica Umami y pregunta cómo contar `alta_iniciada` con la opción preseleccionada, 13-sep-2026 | web |
 | `ACTUALIZACION_ANALITICA_WEB.md` | Anula el contrato de Clarity: equivalencia punto por punto con Umami, eventos que cambian de nombre y nombres fijos porque la radio los lee en Stats, 13-sep-2026 | servidor |
