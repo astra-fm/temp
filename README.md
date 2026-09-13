@@ -12,6 +12,9 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_SELLO_ANTES_DE_VERIFICAR.md` | Sí: el sello usa sus datos y su roster mientras la redacción lo revisa; recorrido y tabla por estado, 13-sep-2026 | servidor |
+| `PREGUNTA_SELLO_ANTES_DE_VERIFICAR.md` | La web pregunta qué puede usar un sello antes de verificarlo, 13-sep-2026 | web |
+| `PUBLICADO_VERIFICACION_WEB.md` | La web confirma la verificación obligatoria publicada, 13-sep-2026 | web |
 | `CAMBIO_VERIFICACION_OBLIGATORIA.md` | El flujo completo de cuentas con la verificación de correo obligatoria: alta, verificación, envío, programación, sello y restablecer, 13-sep-2026 | servidor |
 | `RESPUESTA_SELECTOR_Y_PURGA.md` | Purgadas las dos cuentas de prueba de la web, una de ellas en la cola de probadores, 12-sep-2026 | servidor |
 | `CAMBIO_ALTA_SELECTOR_WEB.md` | El alta empieza por un selector Oyente·Artista·Sello; área de oyente limpia y enlace profundo para la app, 12-sep-2026 | servidor |
