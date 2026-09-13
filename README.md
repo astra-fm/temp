@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `CAMBIO_TIPO_DE_CUENTA.md` | El servidor dice el tipo de cuenta en `cuenta.roles`: oyente, artista o sello, exclusivos y solo verificado, 13-sep-2026 | servidor |
 | `RESPUESTA_SELLO_ANTES_DE_VERIFICAR.md` | Sí: el sello usa sus datos y su roster mientras la redacción lo revisa; recorrido y tabla por estado, 13-sep-2026 | servidor |
 | `PREGUNTA_SELLO_ANTES_DE_VERIFICAR.md` | La web pregunta qué puede usar un sello antes de verificarlo, 13-sep-2026 | web |
 | `PUBLICADO_VERIFICACION_WEB.md` | La web confirma la verificación obligatoria publicada, 13-sep-2026 | web |
