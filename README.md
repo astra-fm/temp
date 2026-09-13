@@ -12,7 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
-| `CAMBIO_VERIFICACION_OBLIGATORIA.md` | Verificar el correo pasa a ser obligatorio para todos; el alta la envía sola y el área sin verificar solo enseña el aviso, 13-sep-2026 | servidor |
+| `CAMBIO_VERIFICACION_OBLIGATORIA.md` | El flujo completo de cuentas con la verificación de correo obligatoria: alta, verificación, envío, programación, sello y restablecer, 13-sep-2026 | servidor |
 | `RESPUESTA_SELECTOR_Y_PURGA.md` | Purgadas las dos cuentas de prueba de la web, una de ellas en la cola de probadores, 12-sep-2026 | servidor |
 | `CAMBIO_ALTA_SELECTOR_WEB.md` | El alta empieza por un selector Oyente·Artista·Sello; área de oyente limpia y enlace profundo para la app, 12-sep-2026 | servidor |
 | `CAMBIO_ALTA_SELECTOR_APP.md` | El mismo selector en la app: Oyente dentro, Artista y Sello abren la web, 12-sep-2026 | servidor |
