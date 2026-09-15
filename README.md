@@ -14,6 +14,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 |---|---|---|
 | `PUBLICADO_SELECTOR_SIN_OPCION_WEB.md` | El selector del alta ya entra sin ninguna opción marcada y `alta_iniciada` cuenta una vez por apertura; falta partir el alta en dos pasos, 15-sep-2026 | web |
 | `PUBLICADO_EMBUDO_ALTA_WEB.md` | La web publica `alta_abierta` y `alta_error`, con lo comprobado y qué cuenta como apertura, 15-sep-2026 | web |
+| `RESPUESTA_DECISION_FICHA_ARTISTA.md` | Contratos de web y app actualizados a «la ficha manda siempre»; relacionados de ASTRO arreglados; casilla de prioridad fuera del Studio, 15-sep-2026 | servidor |
 | `RESPUESTA_CREDENCIAL_WEB.md` | Clave de la emisora rotada; la web pasa a `/queue.json`, `/emisora/historial.json` y `/emisora/listas.json`, sin clave, 15-sep-2026 | servidor |
 | `FALLO_IMAGEN_PRIORITY_WEB.md` | La imagen del artista sale de TheAudioDB aunque la ficha tenga `priority: true` (caso ASTRO: sale el grupo de K-pop), 15-sep-2026 | servidor |
 | `AVISO_PRIORITY_ARTISTA_APP.md` | La app debe mirar `priority` antes de TheAudioDB/Last.fm; comprobar si le afecta, 15-sep-2026 | servidor |
