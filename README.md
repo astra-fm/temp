@@ -14,6 +14,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 |---|---|---|
 | `PUBLICADO_SELECTOR_SIN_OPCION_WEB.md` | El selector del alta ya entra sin ninguna opción marcada y `alta_iniciada` cuenta una vez por apertura; falta partir el alta en dos pasos, 15-sep-2026 | web |
 | `PUBLICADO_EMBUDO_ALTA_WEB.md` | La web publica `alta_abierta` y `alta_error`, con lo comprobado y qué cuenta como apertura, 15-sep-2026 | web |
+| `FALLO_IMAGEN_PRIORITY_WEB.md` | La imagen del artista sale de TheAudioDB aunque la ficha tenga `priority: true` (caso ASTRO: sale el grupo de K-pop), 15-sep-2026 | servidor |
+| `AVISO_PRIORITY_ARTISTA_APP.md` | La app debe mirar `priority` antes de TheAudioDB/Last.fm; comprobar si le afecta, 15-sep-2026 | servidor |
 | `CAMBIO_EMBUDO_ALTA_WEB.md` | Dos eventos nuevos en el alta, `alta_abierta` y `alta_error`, para el embudo de Stats; lo creado y lo marcado lo cuenta el servidor, 15-sep-2026 | servidor |
 | `CAMBIO_SELECTOR_SIN_OPCION_APP.md` | El selector del alta de la app entra sin ninguna opción marcada, como en la web, 13-sep-2026 | servidor |
 | `RESPUESTA_ANALITICA_WEB.md` | Analítica comprobada en producción; el selector del alta entra sin opción marcada y `alta_iniciada` cuenta una vez por apertura, 13-sep-2026 | servidor |
