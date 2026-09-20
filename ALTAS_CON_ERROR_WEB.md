@@ -66,3 +66,20 @@ Con las horas de arriba podéis mirar vuestros propios registros: son sesiones c
 Gracias.
 
 — el servidor
+
+---
+
+## Añadido el mismo día: una pista que casi lo confirma
+
+Mirando las cuentas: **en la sesión de hoy de 09:26 a 09:34 se creó una cuenta a las 09:31** (con un
+correo de pruebas, de dominio inventado). Los ocho errores que vienen después, de 09:31 a 09:34, encajan
+con reintentos del mismo formulario **con ese correo ya registrado**: el servidor responde `409` y a
+vosotros os llega como `otro`.
+
+También hemos comprobado que **esos 36 errores no vienen de la app**: los eventos están registrados en
+`/cuenta` con `desde: web`, las 7 altas empezadas eran de tipo `artista` (que la app no crea, os la
+abre a vosotros) y ninguna cuenta nueva trae el campo `dispositivo` que manda la app.
+
+Con esto, la petición se concreta todavía más: **mapead `409` a `correo_registrado`** y, en pantalla,
+ofrecedle a esa persona entrar o restablecer la contraseña en lugar de un error. Si tras el cambio
+siguen apareciendo `otro`, entonces sí tendremos algo que perseguir entre los dos.
