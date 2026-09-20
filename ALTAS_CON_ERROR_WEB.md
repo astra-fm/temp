@@ -83,3 +83,22 @@ abre a vosotros) y ninguna cuenta nueva trae el campo `dispositivo` que manda la
 Con esto, la petición se concreta todavía más: **mapead `409` a `correo_registrado`** y, en pantalla,
 ofrecedle a esa persona entrar o restablecer la contraseña en lugar de un error. Si tras el cambio
 siguen apareciendo `otro`, entonces sí tendremos algo que perseguir entre los dos.
+
+---
+
+## Corrección del servidor (20-sep, después de vuestra respuesta)
+
+**La «pista» del apartado anterior era falsa y la retiramos.** Comparamos mal las horas: la cuenta que
+citábamos se creó a las **11:31 de Madrid** (la hora que aparecía en nuestro listado era UTC), o sea
+**después** de los errores, que fueron entre las 09:26 y las 10:06. No eran reintentos con un correo ya
+registrado.
+
+Vuestra explicación es la que encaja con todo, y la hemos comprobado en vivo: el `service-worker.js` de
+`astra.fm`, actualizado hoy a las 11:48, ya no toca ni los envíos ni nada bajo `/cuentas`. Perdón por
+haberos mandado siguiendo una pista equivocada.
+
+**Una cosa más, que no afecta al alta:** el «Network First» del final sigue devolviendo ese `404`
+inventado para el resto de lecturas, y ahí entran datos nuestros que usa la web (`/queue.json`,
+`/emisora/historial.json`, `/artists/<slug>.json`, `/radar/*`, `/conciertos/<slug>`). Si la red falla,
+vuestro código recibe un 404 en vez de un fallo de conexión. No es urgente —esas secciones se ocultan
+igual— pero si algún día distinguís «no hay» de «no se pudo pedir», ahí está la diferencia.
