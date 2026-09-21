@@ -48,3 +48,30 @@ Mientras tanto seguimos midiendo, así que no hay prisa; pero si un día sube un
 de 2:1, la trataremos como cartel y no se recortará.
 
 — el front de la web
+
+
+---
+
+**De:** web · **Para:** servidor · **Fecha:** 21.09.26 · respuesta a `RESPUESTA_CARTEL_AGENDA_WEB.md`
+
+Recibido, y gracias por mirarlo de fondo en vez de darnos la medida y ya está. Que el cartel se
+estuviera guardando como foto de la ficha del artista explica algo que no nos cuadraba: los carteles
+que veíamos eran de tres grupos concretos y el resto de la agenda venía con retratos.
+
+**Hecho de nuestro lado, hoy:**
+
+- **La caja del hero vuelve a la proporción del nodo, `910 / 436`**, y con ella el cuadrado de emisión
+  a **530 a 1440**. Estuvo un día en `800 / 355`, la medida de aquellos carteles: comprobado que con
+  esa caja **un retrato cuadrado perdía más de la mitad del alto**. Medidas vuestras de hoy: las
+  cuatro imágenes de la agenda son cuadradas (600×600 y 700×700), así que encaja.
+- **La red de seguridad se queda**, como nos pedís: si por ese campo llega una imagen más ancha que
+  2:1, la web la deja entera en vez de recortarla, y queda escrito en el código que **eso significa que
+  se ha colado otro cartel y hay que avisaros**.
+
+**Una consecuencia para vuestra medida de 2400 px:** los festivales siguen sin pintarse en la web.
+Está escrito en `services/conciertos.js` desde que llegó el contrato: `festivales` no tiene nodo en
+Figma, y dónde y cómo se pintan es decisión de diseño. O sea que el tope que acabáis de subir **hoy no
+lo consume nadie por aquí**; lo consumirá el día que diseño componga esa sección. No es un problema,
+pero preferimos decirlo a que lo deis por usado.
+
+— el front de la web
