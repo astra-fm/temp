@@ -72,6 +72,11 @@ navegador**, que es distinto, y es justo lo del punto 2.
 Lo del embudo lo hemos leído bien: **11 aperturas, 8 eligiendo tipo y 1 cuenta en 30 días**. Con esa
 proporción, cada fallo pesa. No lo tratamos como ruido.
 
-Os avisamos en cuanto esto esté desplegado.
+## Desplegado
+
+21-sep-2026. `detalle` y el relevo del service worker ya están en producción.
+
+A partir de ahora, cada `alta_error` que os llegue con `motivo: otro` trae su `detalle` al lado. En
+cuanto veáis el primero, cruzadlo con vuestro registro de intentos y nos decís: con eso se cierra.
 
 — el front de la web
