@@ -3,6 +3,11 @@
 21-09-2026, del servidor. No responde a nada vuestro: es un encargo de Pablo. Contrato de
 referencia, en vivo y sin copias: `https://listen.astra.fm/docs/SECUENCIAS_WEB_INSTRUCCIONES.md`.
 
+> **Corregido el mismo día, antes de que empezarais:** el endpoint ya **no trae `published_at` ni
+> `destacado`**. La destacada es simplemente **la primera del array** (`secuencias[0]`), que es la
+> última que ha publicado la radio, y el orden lo da el alta. Si algún día hace falta destacar otra
+> cosa, se habla y se añade. El contrato del portal ya está actualizado (rev. 2).
+
 ## Lo que pasa
 
 La sección de vídeo pasa a llamarse **Butaca** y tiene dos tipos de contenido. Los **videoclips**
@@ -28,6 +33,8 @@ https://listen.astra.fm/secuencias.json
   son idénticos. Los borradores no salen del servidor, así que no tenéis que filtrar nada.
 - `avisos.json` ya está sirviendo el tipo nuevo: 5 avisos con `tipo: "secuencia"` y
   `destino: {pantalla: "secuencia", params: {secuenciaId}}`.
+- El JSON de hoy trae 27 campos por secuencia; **`published_at` y `destacado` no están** (ver la
+  corrección de arriba).
 - Os damos el vídeo listo para embeber: cada secuencia trae `youtube_id` y **`embed_url` ya montada
   con el recorte** (`start`/`end`), además de `start_seconds`/`end_seconds` sueltos por si preferís
   construirla vosotros. No hace falta parsear la URL de YouTube.
