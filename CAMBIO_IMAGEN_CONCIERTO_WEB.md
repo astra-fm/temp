@@ -1,34 +1,37 @@
-# A la web · `imagen` en conciertos pasa a ser la imagen del concierto
+# A la web · `cartel` es el nombre, en conciertos y en festivales
 
-22-sep-2026 · del servidor · **cambio de contrato, ya desplegado** · continúa `RESPUESTA_CARTEL_RUTA_PROPIA_WEB.md`
+22-sep-2026 · del servidor · **sustituye a `CAMBIO_IMAGEN_CONCIERTO_WEB.md`, que os mandamos hace un rato
+y estaba equivocado** (decía que el campo pasaba a llamarse `imagen`: olvidadlo).
 
-Decisión de Pablo, con sus palabras: **«Conciertos es el nombre que lleva el apartado y la imagen es de un
-concierto, no de un artista»**. Así que en `/conciertos.json`:
+Pablo lo ha dejado así: **«imagen» es demasiado general, y «cartel» identifica claramente un cartel de
+concierto.** Un solo nombre para la misma cosa en las dos listas.
+
+## Conciertos
+
+- **`cartel`**: el cartel de esa fecha, bajo `/conciertos/images/`, o `null`. Es lo que ya teníais
+  implementado desde ayer: **no tenéis que cambiar nada**.
+- **`imagen` deja de enviarse.** La foto del artista no viaja en esta lista. Si un concierto no tiene
+  cartel, llega `null` y decidís qué pintar, pero no lo saquéis de la ficha del artista: Conciertos y
+  Artistas son apartados distintos y no se relacionan.
+
+## Festivales
+
+Aquí sí cambian dos nombres, y esto sí os toca:
 
 | Campo | Antes | Ahora |
 |---|---|---|
-| `imagen` | la foto del artista | **la imagen del concierto** (la que diseña la redacción), o `null` |
-| `cartel` | la imagen del concierto | **el mismo valor que `imagen`**, como alias temporal |
+| `cartel` | texto con los artistas destacados | **la imagen del cartel** (como en conciertos) |
+| `artistas` | — | **el texto con los artistas destacados** (antes era `cartel`) |
+| `imagen` | la imagen del cartel | ya no se envía |
 
-**La foto del artista ya no viaja en esta lista.** Ni como respaldo cuando no hay imagen del concierto:
-ahí llega `null` y decidís qué pintar —hueco, tarjeta tipográfica, lo que mejor os venga—, pero **no la
-saquéis de la ficha del artista**. Conciertos y Artistas son apartados distintos y no se relacionan: una
-imagen de concierto caduca con su fecha y no tiene por qué parecerse al artista que suena en la radio.
+**Ahora mismo no hay ningún festival publicado**, así que podéis adaptarlo con calma: la lista viene
+vacía y no se rompe nada por el camino.
 
-## Qué tenéis que hacer
+## Lo que no cambia
 
-**Nada urgente.** `cartel` sigue llegando con el mismo valor, así que lo que tenéis desplegado funciona
-igual. Cuando os venga bien, leed `imagen` y avisadnos: el día que nos digáis que ya no leéis `cartel`,
-lo retiramos.
+Proporción original, sin recorte y sin reescalar; la extensión varía (`jpg`, `png`, `webp`) y hay que
+usar la URL tal cual; versionada con `?v=`.
 
-## Cómo queda hoy
-
-Las 8 fechas vigentes tienen su imagen de concierto, todas bajo `/conciertos/images/`. Ninguna fila lleva
-ya una foto de artista.
-
-**Lo demás no cambia:** proporción original, sin recorte y sin reescalar, extensión variable (`jpg`,
-`png`, `webp`) —usad la URL tal cual—, versionada, y los festivales siguen con su `imagen` de siempre.
-
-Contrato actualizado en el portal.
+Contrato actualizado en el portal, con los ejemplos de JSON al día.
 
 — el servidor
