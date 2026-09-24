@@ -48,8 +48,28 @@ misma sesión le falló el alta. El audio sale de `listen.astra.fm`. Si hubiera 
 DNS contra ese host, esa persona no habría oído nada.
 
 Conclusión incómoda pero útil: **servir las cuentas desde `astra.fm` no habría arreglado esto.**
-Seguimos viéndole sentido por otras razones (un viaje en vez de dos), y más abajo decimos cómo
-conseguir eso mismo sin proxy ninguno, pero no es el arreglo.
+
+### 3.1 Y la respuesta directa a lo que pedís: no podemos, y ya no hace falta
+
+**No podemos montar ese proxy.** `astra.fm` resuelve a **185.42.105.72 y lo sirve un Apache**, que es
+el hosting de la web; nuestro servidor es **159.89.111.18** con el nginx de AzuraCast. No tenemos
+acceso a esa máquina. La frase de la petición, «con un proxy en el hosting de la web», describe bien
+dónde tendría que ir: en vuestro lado, no en el nuestro.
+
+**Y el motivo por el que lo queríais ya está resuelto sin proxy.** El segundo argumento de la
+petición era quitar el preflight, «dos viajes en vez de uno». Eso se consigue mandando el cuerpo como
+`text/plain` (punto 4a), que es un cambio de una línea en vuestro `fetch` y no necesita tocar el
+hosting de nadie.
+
+**Si aun así queréis el mismo dominio**, adelante, pero con dos advertencias:
+
+- `ProxyPass` **no es válido en `.htaccess`**: necesita contexto de `VirtualHost`. En hosting
+  compartido eso significa o que cdmon lo habilite, o un pequeño paso por PHP.
+- ⚠️ **Avisadnos antes de ponerlo en producción, porque os romperíamos el límite por IP.** Nuestro
+  `cuentas.conf` manda `X-Real-IP $remote_addr` y el backend hace caso a esa cabecera antes que a
+  nada: detrás de un proxy vuestro, **todas las altas llegarían con la IP de cdmon** y a la undécima
+  de la hora empezarían los `429`. Es un arreglo de una línea nuestro, pero hay que hacerlo antes,
+  no después.
 
 ## 4. Lo que hemos cambiado nosotros — ya está en producción
 
@@ -93,19 +113,52 @@ portada y no redirige a ningún sitio ajeno; y el alta repetida con la misma con
 `201` con **el mismo id de cuenta**, mientras que con otra contraseña sigue devolviendo `409`. La
 cuenta de prueba se ha borrado.
 
-## 5. Lo que os pedimos a vosotros
+## 5. Lo que cae de vuestro lado, y por qué el nuestro no basta
 
-1. **Sacad el alta del navegador incrustado.** Es el arreglo de verdad. Cuando detectéis que estáis
-   dentro de una app, ofreced abrir la página en el navegador del teléfono en vez de intentar el
-   envío ahí. En Android se consigue con un enlace `intent://`; en iOS, avisando. Entre eso y el
-   punto 4b, el alta deja de perderse.
-2. **Mandad el error de verdad en `detalle`**: `err.name` y `err.message` (`TypeError`,
-   `NotAllowedError`, `AbortError`…). `sin_respuesta` nos dijo que no llegó, pero no por qué. Y
-   escuchad `securitypolicyviolation`: si alguna vez es la CSP, lo dirá con nombre y apellidos.
-3. **Revisad `connect-src` de vuestra CSP.** No creemos que sea esto (fallaría para todos, y tres
-   altas entraron bien), pero cuesta un minuto descartarlo: el audio y las imágenes pasan por
-   `media-src` e `img-src`, así que una CSP a la que le falte `listen.astra.fm` en `connect-src`
-   dejaría sonar la radio y mataría el alta sin dejar rastro. Que es exactamente lo que vemos.
+Lo del punto 4 reduce el daño, pero no cura la causa. La causa es que **una parte de vuestro público
+no está en un navegador**, está dentro del de otra app, y ese entorno os va a seguir dando problemas
+en más sitios que el alta: almacenamiento y cookies recortados, service worker que a veces
+simplemente no existe, `localStorage` que se borra al cerrar la app anfitriona, ventanas emergentes
+bloqueadas y el reproductor con menos margen. El alta es donde ha dolido primero porque es lo único
+que escribe en el servidor.
+
+**1. Sacad el alta del navegador incrustado. Esto es el arreglo de verdad.**
+
+Detectadlo y, en vez de intentar el envío ahí, ofreced abrir la página en el navegador del teléfono.
+La detección es por `User-Agent` y es fea, pero es la que hay: en Android los webviews traen `; wv)`
+o vienen de la app anfitriona, y en iOS el de Instagram y Facebook se identifican con
+`Instagram` y `FBAN`/`FBAV`. En Android el salto se hace con un enlace explícito:
+
+```html
+<a href="intent://astra.fm/cuenta#Intent;scheme=https;package=com.android.chrome;end">
+  Abrir en Chrome para crear la cuenta
+</a>
+```
+
+En iOS no hay equivalente: ahí toca el botón de «abrir en Safari» del propio navegador incrustado,
+así que lo único que podéis hacer es **explicarlo con una frase y un dibujo**. No es elegante, pero
+es la diferencia entre un alta y un alta perdida.
+
+**2. Poned el formulario del punto 4b como plan B, no como plan principal.** Si la persona no quiere
+salir de la app, que el botón haga un envío de formulario normal. Pierde la experiencia de una sola
+página (hay una recarga), pero entra. Nuestro consejo: intentad el `fetch`, y si falla sin respuesta,
+en vez de reintentar el mismo `fetch`, **enviad el formulario**. Es un reintento que sí cambia algo.
+
+**3. Mandad el error de verdad en `detalle`.** `err.name` y `err.message` (`TypeError`,
+`NotAllowedError`, `AbortError`…). `sin_respuesta` nos dijo que no llegó, pero no por qué, y sin el
+por qué hemos tardado tres idas y venidas en llegar aquí. Añadid también un
+`window.addEventListener('securitypolicyviolation', …)`: si alguna vez es la CSP, lo dirá con nombre
+y apellidos en vez de parecer un fallo de red.
+
+**4. Revisad `connect-src` de vuestra CSP.** No creemos que sea esto (fallaría para todos, y tres
+altas entraron bien), pero cuesta un minuto descartarlo: el audio y las imágenes pasan por
+`media-src` e `img-src`, así que una CSP a la que le falte `listen.astra.fm` en `connect-src` dejaría
+sonar la radio y mataría el alta sin dejar rastro. Que es exactamente el cuadro que tenemos delante.
+
+**5. Y ya que el service worker sale una vez más:** comprobad que un navegador que instaló el viejo
+se actualiza de verdad. `skipWaiting` hace que el nuevo tome el relevo, pero sin `clients.claim()`
+las pestañas ya abiertas siguen con el anterior. Si el app shell se sirve de caché primero, alguien
+puede estar corriendo vuestro JS de la semana pasada sin saberlo.
 
 ## 6. De paso, el reproductor: dos cosas que hemos visto midiendo
 
@@ -137,5 +190,11 @@ cancela su temporizador con el evento `waiting` y solo lo vuelve a armar con `pl
 rebuffer lo pierde. Sumado a que los temporizadores se estrangulan cuando el móvil se va a segundo
 plano, **`escucha_1min` mide de menos en móvil**. El salto de 71 inicios a 37 minutos no es
 necesariamente gente que se va.
+
+## 7. La app
+
+Los puntos 4a y 4c cambian el contrato que la app también usa (`/cuentas/register`), así que va en un
+aviso aparte: `AVISO_CUENTAS_ALTA_APP.md`. A ella no le afecta nada de los webviews, que es cosa de
+navegadores.
 
 — el servidor
