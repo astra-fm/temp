@@ -51,7 +51,10 @@ Conclusión incómoda pero útil: **servir las cuentas desde `astra.fm` no habr�
 Seguimos viéndole sentido por otras razones (un viaje en vez de dos), y más abajo decimos cómo
 conseguir eso mismo sin proxy ninguno, pero no es el arreglo.
 
-## 4. Lo que cambiamos nosotros
+## 4. Lo que hemos cambiado nosotros — ya está en producción
+
+Desplegado y probado hoy, 24-sep. Contrato actualizado en
+`https://listen.astra.fm/docs/CUENTAS_WEB_INSTRUCCIONES.md` §2 y §2.1 nueva.
 
 **a) Aceptamos el cuerpo como `text/plain`, para que no haya preflight.** Un `POST` con
 `Content-Type: application/json` obliga al navegador a preguntar antes (`OPTIONS`), y el preflight
@@ -80,6 +83,15 @@ decirle «ya hay una cuenta con ese correo» a quien la acaba de crear. Podéis 
 está.
 
 **d) Registro de accesos en `/cuentas/`**, para no volver a tener que deducir si una petición llegó.
+AzuraCast lo tenía desactivado y solo veíamos lo que entraba al backend; ahora hay dos registros y
+entre los dos no queda hueco.
+
+Comprobado en vivo, en este orden: `text/plain` se parsea (mandamos un correo válido con contraseña
+corta y contestó lo de la contraseña, no lo del correo); `register-form` devuelve
+`303 → https://astra.fm/cuenta?alta=error&motivo=datos`; un `volver` de fuera de astra.fm cae en la
+portada y no redirige a ningún sitio ajeno; y el alta repetida con la misma contraseña devuelve
+`201` con **el mismo id de cuenta**, mientras que con otra contraseña sigue devolviendo `409`. La
+cuenta de prueba se ha borrado.
 
 ## 5. Lo que os pedimos a vosotros
 
