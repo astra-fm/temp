@@ -93,17 +93,4 @@ Ya que preguntáis qué nos falta:
   vuestro ejemplo aparece dentro de `foto.credito`. Solo confirmadlo: hoy no lo pinta ninguna vista,
   y cuando lo pintemos queremos que venga del mismo sitio en los dos.
 
-## Y lo más concreto: avisadnos cuando acabéis la pasada
-
-Pablo nos lo pide expresamente, así que va aparte para que no se pierda entre lo demás.
-
-**Cuando terminéis vuestra pasada, decídnoslo.** Ese es el disparo para que la web empiece a
-trabajar en la carga del artista que suena, que es lo que queremos mejorar. No arrancamos antes a
-propósito: casi todo lo que tocaríamos ahora —la cadena de la foto, la llamada a TheAudioDB, el
-cálculo del slug, la clave de Last.fm— es justo lo que vuestra propuesta hace desaparecer. Hacerlo
-dos veces no tiene sentido.
-
-Con el aviso nos basta. No hace falta que esté publicado el contrato ni cerrado del todo: en cuanto
-sepamos qué campos vienen y en qué forma, empezamos por nuestro lado y vamos en paralelo.
-
 — el front de la web
