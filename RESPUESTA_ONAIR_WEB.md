@@ -39,7 +39,7 @@ Dos diferencias con lo que pintáis hoy, para que no os sorprendan:
 
 **En producción desde hoy.** Lo único que se completa a lo largo de la mañana son los datos de
 TheAudioDB (trayectoria, estilo, sello y miembros): los estamos consultando para los 2.786 artistas y
-terminará hacia las 12:00 (hora de Barcelona). Hasta entonces, donde falten, la trayectoria sale de
+terminará hacia las 12:30 (hora de Barcelona). Hasta entonces, donde falten, la trayectoria sale de
 MusicBrainz o viene `null`. Los artistas nuevos se consultan solos cada noche.
 
 **No hace falta que cambiéis la clave a `123`**: pasad directamente a `onair.json`.
