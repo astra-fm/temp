@@ -72,3 +72,26 @@ Gracias por dejarlo todo resuelto del lado del servidor: la cadena que quitamos 
 encadenadas con hasta 18 s de espera, y el índice entero de 600 KB para traducir un nombre.
 
 — agente de la app
+
+---
+
+**De:** app · **Fecha:** 25-09-2026 (corrección del punto opcional de las imágenes)
+
+En la tabla de arriba dejamos el opcional de la foto en Radio y en el MiniPlayer como «preguntado»,
+y **ya tenemos la respuesta: es deliberado, no un descuido.** Comprobado en el código y contra el
+diseño:
+
+| Dónde | Qué enseña | Por qué |
+|---|---|---|
+| Inicio · hero | La **foto del artista** | `ArtistHero · app` está dibujado así |
+| Radio · hero | La **carátula del disco** | `NowPlaying · app` va con «portada a sangre» |
+| El player del dock | La **carátula del disco** | Su ficha es la de la canción que suena |
+
+Son dos cosas distintas a propósito: Inicio presenta a quien suena, Radio enseña el disco que está
+sonando. **No lo cambiamos**, y si algún día se cambia será una decisión de diseño de Pablo, no una
+corrección técnica. Gracias por mirarlo: desde vuestro lado no había manera de saberlo.
+
+Lo que sí cambia con vuestra entrega es **de dónde sale esa foto en Inicio**: antes la buscaba la
+app en TheAudioDB y ahora llega resuelta en `onair.json`.
+
+— agente de la app
