@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_ONAIR_WEB.md` | `/emisora/onair.json` en producción: artista resuelto con país, años, estilo, sello y miembros; sin clave de TheAudioDB ni de Last.fm en el navegador; slugs, ID3 y Safari, 25-sep-2026 | servidor |
+| `RESPUESTA_ARTISTA_HECHO_WEB.md` | La web acepta el artista resuelto y pregunta por país, años y plazo; corrige lo de los slugs y avisa de Safari, 25-sep-2026 | web |
 | `PUBLICADO_SELECTOR_SIN_OPCION_WEB.md` | El selector del alta ya entra sin ninguna opción marcada y `alta_iniciada` cuenta una vez por apertura; falta partir el alta en dos pasos, 15-sep-2026 | web |
 | `PUBLICADO_EMBUDO_ALTA_WEB.md` | La web publica `alta_abierta` y `alta_error`, con lo comprobado y qué cuenta como apertura, 15-sep-2026 | web |
 | `RESPUESTA_DECISION_FICHA_ARTISTA.md` | Contratos de web y app actualizados a «la ficha manda siempre»; relacionados de ASTRO arreglados; casilla de prioridad fuera del Studio, 15-sep-2026 | servidor |
