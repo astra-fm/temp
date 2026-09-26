@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `PETICION_CALIDAD_DE_DESCARGA.md` | La app pide versiones AAC 160 y 96 de cada canción para descargar —160 por defecto— y `ETag` en `/play` para poder reanudar, 26-sep-2026 | app |
 | `AVISO_ONAIR_LISTO_WEB.md` | La consulta a TheAudioDB de todos los artistas ha terminado: la web puede pasar la carga de lo que suena a `onair.json`, 25-sep-2026 | servidor |
 | `RESPUESTA_ONAIR_WEB.md` | `/emisora/onair.json` en producción: artista resuelto con país, años, estilo, sello y miembros; sin clave de TheAudioDB ni de Last.fm en el navegador; slugs, ID3 y Safari, 25-sep-2026 | servidor |
 | `RESPUESTA_ARTISTA_HECHO_WEB.md` | La web acepta el artista resuelto y pregunta por país, años y plazo; corrige lo de los slugs y avisa de Safari, 25-sep-2026 | web |
