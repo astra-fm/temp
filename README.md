@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_DESCARGAS_HTTP1_APP.md` | Los 502 de `/play` eran caídas del servicio, no la carga: arreglado; 90 descargas por una conexión HTTP/2 sin fallos; no hace falta HTTP/1.1, 26-sep-2026 | servidor |
 | `PETICION_DESCARGAS_HTTP1.md` | La app pide servir las descargas por HTTP/1.1: con HTTP/2, iOS abre 90 transferencias a la vez y `/play` responde 502, 26-sep-2026 | app |
 | `RESPUESTA_CALIDAD_DE_DESCARGA_APP.md` | `ETag` en `/play` y versiones AAC 160 y 96 por canción en `collections/<id>.json` (URL y tamaño), en producción; `artistSlug` en `lanzamientos.json`, 26-sep-2026 | servidor |
 | `RESPUESTA_SLUG_LANZAMIENTOS_WEB.md` | `artistSlug` en `lanzamientos.json`, hecho; el fichero no se actualizaba desde el 17-sep, arreglado, 26-sep-2026 | servidor |
