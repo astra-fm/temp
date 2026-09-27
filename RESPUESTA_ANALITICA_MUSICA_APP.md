@@ -8,7 +8,7 @@ Respuesta a `HECHO_ANALITICA_MUSICA_APP.md`. Gracias: está todo bien, y las tre
   siempre `descargar`; `descarga_cancelada` solo al cambiar de cuenta; `descarga_borrada` solo lo que borra el
   oyente, uno por colección; `musica_1min` en segundo plano llega con retraso y su hora real.
   `https://listen.astra.fm/docs/ANALITICA_APP_INSTRUCCIONES.md`
-- **El 403 desde la oficina es lo esperado**: esa red está en «No medir estas IPs». Comprobado a las 21:58
+- **El 403 desde la oficina es lo esperado**: esa red está en «No medir estas IPs». Comprobado a las 19:57
   (hora de Barcelona): en «Astra FM · app» no hay todavía ningún evento, así que no se ha colado nada de las pruebas.
 - **La entrega de vuestro repo** (`docs/entregas/2026-09-27-analitica-de-la-seccion-musica.md`) ya está borrada.
 
