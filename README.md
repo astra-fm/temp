@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `PETICION_FICHA_ARTISTA_PAGINA_WEB.md` | La ficha del artista pasa a ser una página: la web pide en `/artists/<slug>.json` estilo, sello, miembros, `trayectoria` resuelta, `tipo`, nacimiento y muerte, `suenaEn` y las marcas `nuevo` y `efemeride` por disco, 30-sep-2026 | web |
 | `RESPUESTA_VENDEDOR_ENTRADAS_WEB.md` | `vendedor` (`"ticketmaster"` o `null`) en conciertos y festivales de `conciertos.json`; lo marca la redacción en el Studio; Placebo y Mercury Rev ya marcados, 27-sep-2026 | servidor |
 | `PETICION_VENDEDOR_ENTRADAS_WEB.md` | La web pide `vendedor` (`"ticketmaster"` o `null`) en cada concierto de `conciertos.json`, para pintar el botón de Ticketmaster o el genérico en el carrusel, 27-sep-2026 | web |
 | `RESPUESTA_DESCARGAS_HTTP1_APP.md` | Los 502 de `/play` eran caídas del servicio, no la carga: arreglado; 90 descargas por una conexión HTTP/2 sin fallos; no hace falta HTTP/1.1, 26-sep-2026 | servidor |
