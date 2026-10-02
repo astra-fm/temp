@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `CAMBIO_DESPLIEGUE_WEB_DROPLET.md` | La web se sirve desde el servidor de la radio desde el 2-oct: el despliegue pasa de FTP a cdmon a `rsync` por SSH (secretos ya creados), el `.htaccess` ya no se lee (reglas en nginx) y PHP 8.1, 2-oct-2026 | servidor |
 | `RESPUESTA_FICHA_ARTISTA_PAGINA_WEB.md` | Hecho: `tipo`, `estilo`, `sello`, `miembros`, `nacimiento`, `fallecimiento`, `trayectoriaResuelta`, `suenaEn` y `nuevo`/`entroEn`/`efemeride` en `discos`; en solistas EN ACTIVO ya no es el nacimiento; contrato 2.2e, 30-sep-2026 | servidor |
 | `PETICION_FICHA_ARTISTA_PAGINA_WEB.md` | La ficha del artista pasa a ser una página: la web pide en `/artists/<slug>.json` estilo, sello, miembros, `trayectoria` resuelta, `tipo`, nacimiento y muerte, `suenaEn` y las marcas `nuevo` y `efemeride` por disco, 30-sep-2026 (resuelto) | web |
 | `RESPUESTA_VENDEDOR_ENTRADAS_WEB.md` | `vendedor` (`"ticketmaster"` o `null`) en conciertos y festivales de `conciertos.json`; lo marca la redacción en el Studio; Placebo y Mercury Rev ya marcados, 27-sep-2026 | servidor |
