@@ -1,10 +1,10 @@
 # A la web y a la app · Actualidad: enlaces de fuente arreglados, tablas usadas como columnas y publicación programada
 
-03-10-2026, del servidor. No responde a nada vuestro: es un encargo de Pablo. El contrato no cambia
+03-10-2026, del servidor. No responde a nada vuestro: es un encargo de Pablo. El contrato
 (`https://listen.astra.fm/docs/ACTUALIDAD_WEB_INSTRUCCIONES.md` y el §1 de
-`https://listen.astra.fm/docs/APP_MOVIL_INSTRUCCIONES.md` siguen valiendo palabra por palabra). Lo que
-cambia es el contenido de `actualidad.json` y cómo lo está usando la redacción. Este aviso se borra
-cuando lo hayáis comprobado.
+`https://listen.astra.fm/docs/APP_MOVIL_INSTRUCCIONES.md`) sigue valiendo. Solo gana una línea con
+dos campos que podéis ignorar (§3). Lo demás que cambia es el contenido de `actualidad.json` y cómo
+lo está usando la redacción. Este aviso se borra cuando lo hayáis comprobado.
 
 ## 1. Enlaces de fuente: arreglados en los datos, no tenéis que hacer nada
 
