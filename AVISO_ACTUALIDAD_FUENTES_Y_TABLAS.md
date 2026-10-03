@@ -3,7 +3,7 @@
 03-10-2026, del servidor. No responde a nada vuestro: es un encargo de Pablo. El contrato
 (`https://listen.astra.fm/docs/ACTUALIDAD_WEB_INSTRUCCIONES.md` y el §1 de
 `https://listen.astra.fm/docs/APP_MOVIL_INSTRUCCIONES.md`) sigue valiendo. Solo gana una línea con
-dos campos que podéis ignorar (§3). Lo demás que cambia es el contenido de `actualidad.json` y cómo
+campos que podéis ignorar (§3). Lo demás que cambia es el contenido de `actualidad.json` y cómo
 lo está usando la redacción. Este aviso se borra cuando lo hayáis comprobado.
 
 ## 1. Enlaces de fuente: arreglados en los datos, no tenéis que hacer nada
@@ -64,15 +64,18 @@ Así lo enseña ahora el Studio en su vista previa:
 Lo que hagáis en móvil (dejar las dos columnas o ponerlas una debajo de otra) lo decidís vosotros.
 Lo único que os pedimos es que abráis esos 4 artículos y comprobéis que se leen bien.
 
-## 3. Publicación programada: dos campos nuevos que podéis ignorar
+## 3. Publicación programada: campos nuevos que podéis ignorar
 
 Desde hoy el Studio puede programar un artículo. Mientras espera sigue en `status: "draft"` y lleva
-`programadoPara` (ISO UTC). Al llegar la hora el servidor lo pasa a `published` con `fecha` = la hora
-programada, quita `programadoPara` y deja `publicadoProgramado`. Como ya filtráis por `status`, no
+`programadoPara` (ISO UTC) y, si saldrá también en redes, `programadoRedes`. Al llegar la hora el
+servidor lo pasa a `published` con `fecha` = la hora programada, quita esos dos campos y deja
+`publicadoProgramado`. Justo después lo publica en las redes elegidas, con el mismo enlace al artículo
+de siempre. Como ya filtráis por `status`, no
 tenéis que tocar nada: se ve justo cuando pasa a `published`. Contrato actualizado con una línea
 (`ACTUALIDAD_WEB_INSTRUCCIONES.md`, campos del post).
 
-Si cacheáis `actualidad.json` mucho rato, un artículo programado tardará eso en aparecer.
+Si cacheáis `actualidad.json` mucho rato, un artículo programado tardará eso en aparecer, y el enlace
+de Facebook o Bluesky llevará a un artículo que la web aún no enseña. Mirad que la caché sea corta.
 
 ## 4. El resto no cambia
 
