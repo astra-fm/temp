@@ -1,4 +1,4 @@
-# A la web y a la app · Actualidad: enlaces de fuente arreglados y tablas usadas como columnas
+# A la web y a la app · Actualidad: enlaces de fuente arreglados, tablas usadas como columnas y publicación programada
 
 03-10-2026, del servidor. No responde a nada vuestro: es un encargo de Pablo. El contrato no cambia
 (`https://listen.astra.fm/docs/ACTUALIDAD_WEB_INSTRUCCIONES.md` y el §1 de
@@ -64,7 +64,17 @@ Así lo enseña ahora el Studio en su vista previa:
 Lo que hagáis en móvil (dejar las dos columnas o ponerlas una debajo de otra) lo decidís vosotros.
 Lo único que os pedimos es que abráis esos 4 artículos y comprobéis que se leen bien.
 
-## 3. Nada más cambia
+## 3. Publicación programada: dos campos nuevos que podéis ignorar
+
+Desde hoy el Studio puede programar un artículo. Mientras espera sigue en `status: "draft"` y lleva
+`programadoPara` (ISO UTC). Al llegar la hora el servidor lo pasa a `published` con `fecha` = la hora
+programada, quita `programadoPara` y deja `publicadoProgramado`. Como ya filtráis por `status`, no
+tenéis que tocar nada: se ve justo cuando pasa a `published`. Contrato actualizado con una línea
+(`ACTUALIDAD_WEB_INSTRUCCIONES.md`, campos del post).
+
+Si cacheáis `actualidad.json` mucho rato, un artículo programado tardará eso en aparecer.
+
+## 4. El resto no cambia
 
 El editor del Studio permite ahora insertar una imagen pegando su URL: el servidor la descarga y la
 guarda en `https://listen.astra.fm/actualidad/images/content/`, igual que las subidas. El HTML que os
