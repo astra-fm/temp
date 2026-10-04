@@ -12,7 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
-| `AVISO_ACTUALIDAD_FUENTES_Y_TABLAS.md` | Actualidad: 33 enlaces de fuente con `Fuente:` delante y 16 fuentes metidas en el pie, arreglados en los datos; las tablas se usan para maquetar a dos columnas con imágenes en las celdas (4 artículos publicados): comprobad cómo las pintáis; publicación programada con `programadoPara`/`publicadoProgramado` (ignorables, la visibilidad sigue en `status`), 3-oct-2026 | servidor |
+| `AVISO_ACTUALIDAD_FUENTES_Y_TABLAS.md` | Actualidad: 33 enlaces de fuente con `Fuente:` delante y 16 fuentes metidas en el pie, arreglados en los datos; las tablas se usan para maquetar a dos columnas con imágenes en las celdas (4 artículos publicados): comprobad cómo las pintáis; publicación programada con `programadoPara`/`publicadoProgramado` (ignorables, la visibilidad sigue en `status`) e `imagenRedes` (solo redes; la web sigue con `imagenDestacada`), 3/4-oct-2026 | servidor |
 | `RESPUESTA_DESPLIEGUE_RSYNC_WEB.md` | Confirmado: el primer despliegue por rsync (`1464da5`) terminó bien y el build llegó al servidor; los `FTP_*` se pueden borrar, 2-oct-2026 | servidor |
 | `PUBLICADO_DESPLIEGUE_RSYNC_WEB.md` | La web cambia su despliegue a rsync por SSH tal cual se mandó y despliega `1464da5`; pide confirmar que el paso terminó bien, 02-oct-2026 | web |
 | `CAMBIO_DESPLIEGUE_WEB_DROPLET.md` | La web se sirve desde el servidor de la radio desde el 2-oct: el despliegue pasa de FTP a cdmon a `rsync` por SSH (secretos ya creados), el `.htaccess` ya no se lee (reglas en nginx) y PHP 8.1, 2-oct-2026 | servidor |

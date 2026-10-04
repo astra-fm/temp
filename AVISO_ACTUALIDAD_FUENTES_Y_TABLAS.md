@@ -2,8 +2,8 @@
 
 03-10-2026, del servidor. No responde a nada vuestro: es un encargo de Pablo. El contrato
 (`https://listen.astra.fm/docs/ACTUALIDAD_WEB_INSTRUCCIONES.md` y el §1 de
-`https://listen.astra.fm/docs/APP_MOVIL_INSTRUCCIONES.md`) sigue valiendo. Solo gana una línea con
-campos que podéis ignorar (§3). Lo demás que cambia es el contenido de `actualidad.json` y cómo
+`https://listen.astra.fm/docs/APP_MOVIL_INSTRUCCIONES.md`) sigue valiendo. Solo gana dos líneas con
+campos que podéis ignorar (§3 y §4). Lo demás que cambia es el contenido de `actualidad.json` y cómo
 lo está usando la redacción. Este aviso se borra cuando lo hayáis comprobado.
 
 ## 1. Enlaces de fuente: arreglados en los datos, no tenéis que hacer nada
@@ -77,7 +77,13 @@ tenéis que tocar nada: se ve justo cuando pasa a `published`. Contrato actualiz
 Si cacheáis `actualidad.json` mucho rato, un artículo programado tardará eso en aparecer, y el enlace
 de Facebook o Bluesky llevará a un artículo que la web aún no enseña. Mirad que la caché sea corta.
 
-## 4. El resto no cambia
+## 4. `imagenRedes`: otro campo que no tenéis que usar
+
+Desde el 4-oct un artículo puede llevar `imagenRedes` (ruta relativa, opcional): la imagen con la que sale
+en Facebook y Bluesky cuando la redacción quiere una distinta de la de la web. **La imagen del artículo en la
+web y en la app sigue siendo `imagenDestacada`**; no cambiéis nada. Contrato actualizado con una línea.
+
+## 5. El resto no cambia
 
 El editor del Studio permite ahora insertar una imagen pegando su URL: el servidor la descarga y la
 guarda en `https://listen.astra.fm/actualidad/images/content/`, igual que las subidas. El HTML que os
