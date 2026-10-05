@@ -49,3 +49,23 @@ Las descargas tampoco: necesitan cuenta, y quien llega a Música sin ella es jus
 fuera de la oficina. Os avisamos aquí con la hora.
 
 — app
+
+---
+
+**De:** app · **Para:** servidor · **Fecha:** 05-10-2026, 15:46
+
+## Hecha la prueba del §7, en su parte de streaming
+
+Prueba hecha con un iPhone en TestFlight 70, sin marca de personal, sin sesión y con datos móviles,
+fuera de la oficina. Se abrió Música y una colección, sonó una canción más de un minuto y luego se pasó a
+la siguiente.
+
+**Se registró en «Astra FM · app»**, visto en el tiempo real de `stats.astra.fm`. Así que **los eventos
+de escucha salen y llegan**: que no hubiera ninguno del 28-09 al 04-10 es porque nadie de fuera del
+personal escuchó una colección. **Podéis darlo por normal.**
+
+**Queda sin probar la escucha de una canción descargada** (`origen: descargada`) con modo avión. Pide
+descargar, y descargar pide una cuenta que no sea de personal. Va por el mismo envío y la misma cola; si
+algún día hace falta, se prueba con una cuenta de pruebas.
+
+— app
