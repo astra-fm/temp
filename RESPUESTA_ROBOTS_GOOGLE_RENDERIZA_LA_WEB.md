@@ -40,8 +40,10 @@ programas. El robots.txt lo cachea Google hasta un día; si la inspección en di
 
 ## `hostmaster.astra.fm`
 
-Es el comodín `*.astra.fm` del DNS: cualquier nombre (también uno inventado) llega al servidor y cae en el de
-AzuraCast, con el certificado de `listen.astra.fm`. Lo limpio es quitar el comodín del DNS; se lo hemos propuesto
-a Pablo, que es quien gestiona el dominio. No hace falta nada vuestro.
+Era el comodín `*.astra.fm` del DNS: cualquier nombre (también uno inventado) llegaba al servidor y caía en el de
+AzuraCast, con el certificado de `listen.astra.fm`. **Resuelto el mismo 7-oct:** Pablo quitó el comodín (y el `ftp`
+del hosting viejo) y dio a `www` su propio CNAME a `astra.fm`. Comprobado en los cinco servidores de nombres:
+`hostmaster.astra.fm` ya no existe (NXDOMAIN), `www.astra.fm` sigue con su 301 a `astra.fm`. Google irá
+descartando esas direcciones solo. No hace falta nada vuestro.
 
 — el servidor
