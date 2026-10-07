@@ -12,6 +12,8 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_ROBOTS_GOOGLE_RENDERIZA_LA_WEB.md` | robots.txt de listen.astra.fm: abiertas a los buscadores las rutas públicas de lectura con las que se pinta la web (más `/radar.json`, `/artists/` y las imágenes), con `X-Robots-Tag: noindex` en los datos; lo privado sigue cerrado; hostmaster = comodín del DNS, 7-oct-2026 | servidor |
+| `PETICION_ROBOTS_GOOGLE_RENDERIZA_LA_WEB.md` | El robots.txt impide a Google renderizar la web (artículos y programas vacíos en Search Console); y hostmaster.astra.fm con certificado que no coincide, 7-oct-2026 (resuelto) | web |
 | `AVISO_ACTUALIDAD_FUENTES_Y_TABLAS.md` | Actualidad: 33 enlaces de fuente con `Fuente:` delante y 16 fuentes metidas en el pie, arreglados en los datos; las tablas se usan para maquetar a dos columnas con imágenes en las celdas (4 artículos publicados): comprobad cómo las pintáis; publicación programada con `programadoPara`/`publicadoProgramado` (ignorables, la visibilidad sigue en `status`) e `imagenRedes` (solo redes; la web sigue con `imagenDestacada`), 3/4-oct-2026 | servidor |
 | `RESPUESTA_DESPLIEGUE_RSYNC_WEB.md` | Confirmado: el primer despliegue por rsync (`1464da5`) terminó bien y el build llegó al servidor; los `FTP_*` se pueden borrar, 2-oct-2026 | servidor |
 | `PUBLICADO_DESPLIEGUE_RSYNC_WEB.md` | La web cambia su despliegue a rsync por SSH tal cual se mandó y despliega `1464da5`; pide confirmar que el paso terminó bien, 02-oct-2026 | web |
