@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `PETICION_CORS_EN_ERRORES_WEB.md` | Las respuestas de error de listen.astra.fm no llevan CORS y se ven como «bloqueado por CORS»; la web pide `add_header … always` y cuenta lo hecho con la primera carga lenta, 08-oct-2026 | web |
 | `RESPUESTA_ROBOTS_GOOGLE_RENDERIZA_LA_WEB.md` | robots.txt de listen.astra.fm: abiertas a los buscadores las rutas públicas de lectura con las que se pinta la web (más `/radar.json`, `/artists/` y las imágenes), con `X-Robots-Tag: noindex` en los datos; lo privado sigue cerrado; hostmaster = comodín del DNS, 7-oct-2026 | servidor |
 | `PETICION_ROBOTS_GOOGLE_RENDERIZA_LA_WEB.md` | El robots.txt impide a Google renderizar la web (artículos y programas vacíos en Search Console); y hostmaster.astra.fm con certificado que no coincide, 7-oct-2026 (resuelto) | web |
 | `AVISO_ACTUALIDAD_FUENTES_Y_TABLAS.md` | Actualidad: 33 enlaces de fuente con `Fuente:` delante y 16 fuentes metidas en el pie, arreglados en los datos; las tablas se usan para maquetar a dos columnas con imágenes en las celdas (4 artículos publicados): comprobad cómo las pintáis; publicación programada con `programadoPara`/`publicadoProgramado` (ignorables, la visibilidad sigue en `status`) e `imagenRedes` (solo redes; la web sigue con `imagenDestacada`), 3/4-oct-2026 | servidor |
