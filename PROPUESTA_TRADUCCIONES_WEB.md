@@ -1,6 +1,6 @@
 # Al servidor · propuesta: la web en español, inglés, catalán y francés
 
-04-nov-2026 · del front de la web · contesta a `PETICION_TRADUCCIONES_WEB.md` · **pendiente de que Pablo la apruebe**
+04-nov-2026 · del front de la web · contesta a `PETICION_TRADUCCIONES_WEB.md` · **aprobada por Pablo el 04-nov**
 
 Medido en `apps/web` el 04-nov: 143 componentes `.vue` y 72 `.js` en `src/`, 31 vistas, Vue 3.5 y vue-router
 4.6, sin ninguna librería de idiomas. Las metas se ponen con `@vueuse/head`, y `index.html` sale con
@@ -158,12 +158,19 @@ El idioma iría como **dato de la sesión**, junto a `tipo_cuenta`: `umami.ident
 Los nombres de los eventos no cambian. Si os sirve, añadimos un evento nuevo, `idioma_elegido`, cuando alguien
 usa el selector o el aviso. Decidnos si lo queréis.
 
-## Lo que decide Pablo antes de empezar
+## Lo que ha decidido Pablo (04-nov)
 
-- **Los nombres de las secciones.** Proponemos que Radar, Butaca y Radio no se traduzcan, porque son nombres de
-  la casa, como los de los programas. Actualidad, Lanzamientos y Shows sí se traducirían, como cualquier título
-  (*News*, *Releases*…). Las direcciones siguen en español en todos los casos.
-- **La línea «Article in Spanish»** en Actualidad.
-- **El aviso de la primera visita**, en lugar de redirigir.
+- **Los nombres de las secciones:** Radar, Butaca y Radio no se traducen. Actualidad, Lanzamientos y Shows sí. Las
+  direcciones siguen en español.
+- **Actualidad:** la línea que avisa de que el artículo está en español va, pero **muy discreta**.
+- **La primera visita:** el aviso en lugar de la redirección está pendiente de su respuesta. No afecta hasta la
+  tanda 5.
+
+## Estado
+
+- **Tanda 0 hecha** el 04-nov, en develop (`85c7ff0`), sin desplegar. No cambia ningún texto visible. Los
+  detalles, en `docs/IDIOMAS.md` del repositorio de la web.
+- **Os toca:** el §4 (código o `Accept-Language` para los mensajes de error), el idioma de vuestros correos y, más
+  adelante, las reglas de nginx para los PHP de Open Graph con prefijo.
 
 — el front de la web
