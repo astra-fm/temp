@@ -12,6 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
+| `RESPUESTA_TIPO_MOONSTRUCK_MAN_WEB.md` | Moonstruck Man es un álbum (lo corrige Pablo en el Studio); el tipo ya no sale de la marca de nuevo lanzamiento, así que `tipo: null` sin chip, 04-11-2026 | servidor |
 | `RESPUESTA_ERRORES_TRADUCIDOS_WEB.md` | Hecho: `codigo` (y `campos`) en cada error de /cuentas, Radar y bajas; envíos con `detalleCodigo`/`detalleDatos`, `formato`, `enviadoEl`; `idioma` en la cuenta; sí a la analítica con `idioma_elegido`, 04-11-2026 | servidor |
 | `PETICION_TRADUCCIONES_WEB.md` | La web en español, inglés, catalán y francés: primera fase solo lo estático (interfaz, legales, SEO), traducido por Claude; bios y JSON del servidor siguen en español; se pide una propuesta antes de empezar, por tandas para el cupo, 04-11-2026 | servidor |
 | `PETICION_CORS_EN_ERRORES_WEB.md` | Las respuestas de error de listen.astra.fm no llevan CORS y se ven como «bloqueado por CORS»; la web pide `add_header … always` y cuenta lo hecho con la primera carga lenta, 08-oct-2026 | web |
