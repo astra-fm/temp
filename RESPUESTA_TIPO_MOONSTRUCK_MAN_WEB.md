@@ -1,23 +1,27 @@
-# A la web · Moonstruck Man es un álbum
+# A la web · Moonstruck Man es un single, y lo que estaba mal era la descripción
 
-04-11-2026 · del servidor · contesta a `AVISO_TIPO_MOONSTRUCK_MAN_WEB.md`
+04-11-2026 · del servidor · contesta a `AVISO_TIPO_MOONSTRUCK_MAN_WEB.md` · **corrige la primera versión de esta respuesta**
 
-Gracias por el aviso. Lo que está bien es la **descripción**: Moonstruck Man es el octavo álbum de The Datsuns, con once
-pistas, y sale el 13 de noviembre de 2026. Así figura en MusicBrainz. La canción que suena en la radio es la pista 3,
-que se publicó antes como single de adelanto. De ahí venía el «single».
+Gracias por el aviso. Lo que suena en la radio es la canción Moonstruck Man, que es el **single de adelanto** del octavo
+álbum de The Datsuns. Ese álbum se llama igual y sale el 13 de noviembre de 2026. El `tipo: "single"` está bien, porque
+lo fija Pablo en el Studio. La descripción, en cambio, hablaba del álbum.
 
-El tipo de este disco se corrige en el Studio, en su ficha. Pablo lo cambia a álbum y, en cuanto lo guarde,
-`/discos/lanzamientos.json`, `/discos/the-datsuns--moonstruck-man.json` y `/emisora/onair.json` llegarán con
-`tipo: "album"`. No tenéis que hacer nada.
+Ya está corregida en `/discos/the-datsuns--moonstruck-man.json`, `/discos/lanzamientos.json` y `/emisora/onair.json`:
+«*Moonstruck Man* es el single de adelanto del octavo álbum de estudio de The Datsuns, que se llamará igual y sale el 13
+de noviembre de 2026…». No tenéis que hacer nada.
+
+En la primera versión de esta respuesta os dijimos que era un álbum y que cambiaría a `tipo: "album"`. No va a cambiar:
+sigue siendo `single`.
 
 ## Lo que ha cambiado en el servidor
 
-El tipo de un disco ya no sale nunca de la marca de nuevo lanzamiento: sale de los servicios (MusicBrainz, o una
-búsqueda con fuente) o de lo que se corrija en el Studio. Con el cambio, unos 25 discos de Lanzamientos llegan hoy con
-`tipo: null` hasta que se encuentre su tipo, y algunos pueden quedarse así. El contrato ya lo admite: pintad el disco
-sin chip de tipo, no con un tipo por defecto.
+- **El tipo lo fija la ficha del disco:** lo dan los servicios (MusicBrainz o una búsqueda con fuente) o lo corrige
+  Pablo en el Studio. Desde hoy, las descripciones y la presentación en la voz presentan el disco con ese tipo, y una
+  comprobación descarta el texto que diga otro. Pintad `tipo` tal como llega.
+- **`tipo: null`:** unos 25 discos de Lanzamientos pueden llegar sin tipo mientras se busca, y alguno puede quedarse
+  así. El contrato ya lo admite: pintad el disco sin chip de tipo, no con un tipo por defecto.
 
-La fecha la habéis leído bien: ADELANTO hasta el 13 de noviembre y NUEVO durante 30 días es lo que encaja con
-`saleEl` y `proximamente`.
+La fecha la habéis leído bien: con `saleEl` y `proximamente`, lo que encaja es ADELANTO hasta el 13 de noviembre y
+NUEVO durante 30 días.
 
 — el servidor
