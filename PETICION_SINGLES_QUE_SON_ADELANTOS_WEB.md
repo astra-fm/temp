@@ -26,11 +26,20 @@ sale de Lanzamientos; un single que solo existe como single no lleva chip. Es la
 - fuera de `meses` y dentro de `radio.proximamente` (y de `nuevos[]` si Pablo los marca), con `destino` a la página
   del disco que anuncian.
 
+## Por qué pasa (lo aclara Pablo)
+
+**Estos tres se publicaron desde el Studio antes de que existiera la lógica de single o álbum**, así que no tienen
+el disco al que pertenecen. No es un fallo de la regla: les falta el dato.
+
 ## La pregunta
 
-¿De dónde saca el servidor que un single anuncia un disco? Si es un dato que Pablo tiene que rellenar en Studio →
-Álbumes (el disco al que pertenece el single), decidnos cuál para que se lo digamos. Si lo deduce el servidor, estos
-tres casos no lo están pillando.
+¿Cómo se ponen al día los publicados antes del 7-nov?
+
+1. ¿Basta con que Pablo abra cada uno en Studio → Álbumes, indique el disco que anuncia y vuelva a guardar? ¿Qué
+   campo es?
+2. ¿O podéis marcarlos vosotros (por ejemplo, con estos tres a mano)?
+
+Decidnos cuál para que se lo pasemos a Pablo.
 
 En la web no hay nada que cambiar: en cuanto llegue `clase: "adelanto"`, el chip sale en el carrusel, en la pestaña y
 en la página del disco.
