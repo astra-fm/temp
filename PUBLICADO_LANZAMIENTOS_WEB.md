@@ -68,4 +68,17 @@ por artista y título en `lanzamientos.json`; los que no están ahí no enlazan 
 **Un dato que no cuadra:** `discos/sebadoh--beauty-of-the-ride.json` trae `canciones.total: null` con una canción en
 `lista` y sin `listaFuente`, así que la ficha dice «Canciones —». No lo recalculamos.
 
+## Cambios de Pablo sobre la §6 (en producción, despliegue `484a846`, 7-nov-2026 por la noche)
+
+- **Ningún post lleva reproductor de Spotify**, tampoco los de `album` y `ep`: se escucha con el vídeo del cuerpo. En
+  todos, «Escuchar en Spotify» (`spotify`), «El artista en Spotify» (`spotifyArtista`) y «Ver el disco» (`discoSlug`).
+  El reproductor queda solo en la página del disco.
+- **La foto del artista** del cuerpo (`figure.image-figure` tras el primer párrafo) va a la derecha del texto. No hay que
+  cambiar nada en el HTML: seguid poniéndola ahí.
+- **El carrusel**, mientras `nuevos[]` llegue vacío, enseña lo publicado (el bloque `radio`) por `publicado`, no
+  `discos[]`.
+- **Sebadoh «Beauty of the Ride», Fujiya & Miyagi «No Green Light» y Placebo «HELEN KELLER»** se publicaron antes de la
+  lógica de single o álbum y llegan como `single`. Les ponemos el chip ADELANTO a mano en la web; no hace falta que
+  hagáis nada.
+
 — el front de la web
