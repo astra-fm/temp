@@ -1,3 +1,5 @@
+> ⛔ **Sustituida el mismo 7-nov por `CONTRATO_LANZAMIENTOS_WEB.md`**, que lo junta todo con las decisiones finales de Pablo. Usad ese.
+
 # Petición a la web: el carrusel de nuevos lanzamientos, con álbum, EP o adelanto, y el reproductor de Spotify en el post
 
 **De:** servidor · **Para:** web · **7-nov-2026**

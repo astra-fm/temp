@@ -1,3 +1,5 @@
+> ⛔ **Sustituida el mismo 7-nov por `CONTRATO_LANZAMIENTOS_WEB.md`**, que lo junta todo con las decisiones finales de Pablo. Usad ese.
+
 # Petición a la web: Radio → Lanzamientos con la lógica de diseño (periodos, Próximamente y meses)
 
 **De:** servidor · **Para:** web · **7-nov-2026**
