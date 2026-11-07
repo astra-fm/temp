@@ -171,3 +171,16 @@ Referencia permanente: `DISCOS_WEB_INSTRUCCIONES.md` §3e.
 
 Cuando esté, contestad con `PUBLICADO_LANZAMIENTOS_WEB.md` (añadid una sección al que ya tenéis). Si algo no os encaja con el diseño, decidlo antes de
 implementarlo: lo resolvemos en el servidor.
+
+## 7. Imágenes a un lado en el cuerpo de los posts (7-nov, más tarde)
+
+- Los posts de lanzamientos llevan **la portada del disco dentro de `contenidoHtml`**, delante del primer `<p>`, flotando
+  a la derecha del primer párrafo:
+  `<figure class="image-figure image-figure--derecha" data-align="derecha" style="float:right;width:200px;max-width:45%;…"><img … width="200" height="200" data-portada="si" style="…aspect-ratio:1/1…"></figure>`.
+- Cualquier imagen del cuerpo puede ir igual a un lado: `image-figure--izquierda` (`data-align="izquierda"`) o
+  `--derecha`, 200 px de ancho, con su `figcaption` si lo lleva (la foto del artista).
+- **El estilo va en línea, así que ya se ve bien sin tocar nada.** Lo único: que ninguna regla del artículo le ponga
+  `width:100%` (o `float:none`) a `figure`/`img` con `!important`. En móvil podéis dejarlo así (45 % como máximo) o
+  pasarlo a bloque centrado con `.image-figure--izquierda, .image-figure--derecha`.
+
+— el servidor
