@@ -1,6 +1,6 @@
 # Contrato para la web: lanzamientos (Radio → Lanzamientos, carrusel y posts)
 
-**De:** servidor · **Para:** web · **7-nov-2026** · **En producción.**
+**De:** servidor · **Para:** web · **7-nov-2026** · **En producción.** · **Actualizado el 7-nov por la noche: §6.**
 
 Sustituye a `PETICION_CARRUSEL_LANZAMIENTOS_CLASE_WEB.md` y a `PETICION_RADIO_LANZAMIENTOS_PERIODOS_WEB.md`, ambas de hoy:
 lo que vale es este documento. El contrato completo y permanente está en `https://listen.astra.fm/docs` →
@@ -146,5 +146,28 @@ Lleva lo mismo que una tarjeta de disco y además:
 - No repetir el destacado en la rejilla.
 - No enlazar a Spotify desde las tarjetas: la tarjeta lleva a la página del disco, y es allí donde está el reproductor.
 
-Cuando esté, contestad con `PUBLICADO_LANZAMIENTOS_WEB.md`. Si algo no os encaja con el diseño, decidlo antes de
+## 6. Cambio del 7-nov por la noche: la publicación y la ficha del disco (gracias por `PUBLICADO_LANZAMIENTOS_WEB.md`)
+
+Pablo separa las dos cosas: la **ficha del disco** es lo que *es* el disco, y la **publicación** es lo que contamos de él.
+Referencia permanente: `DISCOS_WEB_INSTRUCCIONES.md` §3e.
+
+1. **Posts de singles y adelantos: sin reproductor de Spotify.** Con `clase` `single` o `adelanto`, quitad el mini de
+   Spotify del final del post. Se escucha con el **vídeo de YouTube que va dentro de `contenidoHtml`**
+   (`div[data-youtube-video]`, el mismo HTML del editor que ya pintáis). De Spotify, dos enlaces al final:
+   «Escuchar en Spotify» (`spotify`) y «El artista en Spotify» (**`spotifyArtista`**, nuevo), cada uno solo si viene.
+   En `album` y `ep` no cambia nada: el reproductor grande al final, con `spotify`.
+2. **Dentro del cuerpo del post** puede venir la foto del artista (`figure.image-figure` con su pie) y el vídeo. Es el
+   HTML de siempre: no hay que tocar el render. La imagen de cabecera (`imagenDestacada`) pasa a ser rectangular cuando
+   Pablo la sube; si no, la portada.
+3. **Del post al disco: `discoSlug`** (nuevo, en todos los posts de lanzamientos, también en los de discos que no suenan
+   en la radio). «Ver el disco» → `/lanzamientos/<discoSlug>` (`discos/<discoSlug>.json`).
+4. **La página del disco** sigue con su reproductor de Spotify y además:
+   - `descripcion` es el texto **«Sobre el disco»** (de consulta: qué es, sello, grabación, productor). Ahora también en
+     los discos de fuera de la radio. Con `null`, sin el bloque.
+   - `lista` puede venir de Spotify (`listaFuente: "spotify"`): `n`, `titulo`, `duracion` (segundos), `enAstra`. Ya no
+     llega vacía en los discos que están en Spotify.
+   - `spotifyArtista`: «El artista en Spotify», si viene.
+5. `textoRedes`, si lo veis en un post, es el resumen para redes: no se enseña en la web.
+
+Cuando esté, contestad con `PUBLICADO_LANZAMIENTOS_WEB.md` (añadid una sección al que ya tenéis). Si algo no os encaja con el diseño, decidlo antes de
 implementarlo: lo resolvemos en el servidor.
