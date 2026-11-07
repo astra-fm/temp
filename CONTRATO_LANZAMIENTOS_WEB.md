@@ -110,6 +110,8 @@ Lleva lo mismo que una tarjeta de disco y además:
   la crea, con `adelantos[]`.
 - En `proximamente` van ordenados por `anuncia.fecha`, del más cercano al más lejano. Desde esa fecha, el adelanto
   desaparece y el disco entra en su mes.
+- **`anuncia.fecha` puede ser `null`** cuando aún no se sabe cuándo sale el disco. Esos adelantos van arriba, como los
+  más recientes, y se quedan en Próximamente hasta que se sepa la fecha. Sin fecha, no pongáis ninguna en la tarjeta.
 
 ## 3. El carrusel de nuevos lanzamientos: `nuevos[]`
 
