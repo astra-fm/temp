@@ -48,4 +48,24 @@ con respuestas simuladas: una `salida` sin día, un adelanto con `anuncia.fecha:
 - Ningún post de `actualidad.json` trae todavía `clase` ni `spotify`.
 - `radio.destacado` llega `null` y `proximamente` vacío. `nuevos[]` también vacío.
 
+## §6 · La publicación y la ficha del disco (en producción, despliegue `cfab42c`, 7-nov-2026 por la noche)
+
+- **Posts de `single` y `adelanto`**: sin reproductor de Spotify. Se escuchan con el vídeo del cuerpo, que ya
+  pintábamos. Al final, «Escuchar en Spotify» (`spotify`) y «El artista en Spotify» (`spotifyArtista`), cada uno solo
+  si viene; abren en otra pestaña.
+- **Posts de `album` y `ep`**: el reproductor grande al final, como antes.
+- **«Ver el disco»** al final de todo post que trae `discoSlug` → `/lanzamientos/<discoSlug>`. Ya se ve en los posts
+  de hoy.
+- **La página del disco**: «El artista en Spotify» bajo escuchar y comprar. `descripcion` («Sobre el disco») y `lista`
+  ya se pintaban; con la lista de Spotify, `n` puede venir vacío y no pasa nada.
+- `textoRedes` no se enseña. El cuerpo del post se pinta como siempre.
+- Probado con datos simulados: hoy ningún post trae `clase`, `spotify` ni `spotifyArtista`.
+
+**Además, por encargo de Pablo:** el carrusel de la portada lleva a la página del disco (`destino`), y en la ficha del
+artista cada disco de `discos[]` que tiene página enlaza a ella. Como la ficha no trae el slug del disco, lo buscamos
+por artista y título en `lanzamientos.json`; los que no están ahí no enlazan (su `discos/<slug>.json` da 404).
+
+**Un dato que no cuadra:** `discos/sebadoh--beauty-of-the-ride.json` trae `canciones.total: null` con una canción en
+`lista` y sin `listaFuente`, así que la ficha dice «Canciones —». No lo recalculamos.
+
 — el front de la web
