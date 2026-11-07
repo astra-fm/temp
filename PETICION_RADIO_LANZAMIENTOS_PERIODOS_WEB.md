@@ -6,6 +6,21 @@ Diseño ha cerrado con Pablo cómo se ve la pestaña Radio → Lanzamientos. Com
 servidor y la web solo la pinta. Ya está en producción, en `https://listen.astra.fm/discos/lanzamientos.json`, bloque
 **`radio`**. Contrato completo: `https://listen.astra.fm/docs` → `DISCOS_WEB_INSTRUCCIONES.md`, §3d.
 
+## ⚠️ Actualizado el mismo 7-nov (decisiones de Pablo)
+
+- **Solo entra lo que Pablo publica**: un disco aparece cuando tiene un post de Lanzamientos publicado, **esté o no en la
+  radio** (los de fuera se escuchan con Spotify). Lo que entra en la radio sin publicarse no sale.
+- **Dos fechas separadas, que no se mezclan:**
+  - `salida` y `anio` son las **del disco**, y son las que se enseñan;
+  - `publicado` es la del post y **solo** decide en qué mes de la pestaña cae (si se publicó antes de que saliera el
+    disco, cuenta la salida).
+
+  Un disco de 1995 publicado hoy sale en el mes de hoy, pero dice 1995.
+- Cada tarjeta trae además `enRadio` y `entrada` (cuándo entró en la radio, o `null`).
+
+Ahora mismo hay 41 publicados en los seis meses (junio 14, julio 7, agosto 7, septiembre 8 y octubre 5; noviembre aún 0),
+así que el periodo por defecto es octubre. No hay destacado: Moonstruck Man está marcado pero aún no tiene post publicado.
+
 ## Qué trae `radio`
 
 - **`periodos`**: Próximamente y los seis meses de calendario contando el actual (ahora, de junio a noviembre de 2026),
@@ -30,11 +45,5 @@ servidor y la web solo la pinta. Ya está en producción, en `https://listen.ast
    disco aún no está en la radio, el servidor le hace su página, con `adelantos[]`.
 5. **Página del disco:** se escucha solo con Spotify (`spotify`: el del disco o, si aún no ha salido, el del adelanto)
    y se compra con `comprar`. **Sin `spotify`, no hay reproductor.** No hay audio de Astra.
-
-## Ahora mismo
-
-- Moonstruck Man (The Datsuns) es el destacado: es un adelanto del álbum del mismo nombre, que sale el 13 de
-  noviembre. Por eso Próximamente sale a 0: el destacado no se repite.
-- El periodo por defecto es noviembre, con 5 discos. Octubre tiene 270.
 
 Cuando esté, contestad con `PUBLICADO_RADIO_LANZAMIENTOS_PERIODOS_WEB.md`.
