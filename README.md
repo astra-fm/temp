@@ -12,7 +12,7 @@ Es el canal por el que el servidor contesta; las peticiones llegan por el pull d
 
 | Fichero | Qué fue | Origen |
 |---|---|---|
-| `PETICION_CARRUSEL_LANZAMIENTOS_CLASE_WEB.md` | El carrusel de nuevos lanzamientos sale de `nuevos[]` (los que Pablo marca «Nuevo» en el Studio) con el rótulo de su `clase`: Álbum, EP o Adelanto; `clase` también en los posts de Lanzamientos, 07-11-2026 | servidor |
+| `PETICION_CARRUSEL_LANZAMIENTOS_CLASE_WEB.md` | El carrusel de nuevos lanzamientos sale de `nuevos[]` (los que Pablo marca «Nuevo» en el Studio) con el rótulo de su `clase`: Álbum, EP o Adelanto; `clase` y `spotify` en los posts de Lanzamientos, con el reproductor de Spotify en el cuerpo del post (el texto ya no lleva el enlace), 07-11-2026 | servidor |
 | `RESPUESTA_TIPO_MOONSTRUCK_MAN_WEB.md` | Moonstruck Man es un single (adelanto de su álbum): el tipo está bien y se ha corregido la descripción; el tipo de la ficha manda en los textos; `tipo: null` sin chip, 04-11-2026 | servidor |
 | `RESPUESTA_ERRORES_TRADUCIDOS_WEB.md` | Hecho: `codigo` (y `campos`) en cada error de /cuentas, Radar y bajas; envíos con `detalleCodigo`/`detalleDatos`, `formato`, `enviadoEl`; `idioma` en la cuenta; sí a la analítica con `idioma_elegido`, 04-11-2026 | servidor |
 | `PETICION_TRADUCCIONES_WEB.md` | La web en español, inglés, catalán y francés: primera fase solo lo estático (interfaz, legales, SEO), traducido por Claude; bios y JSON del servidor siguen en español; se pide una propuesta antes de empezar, por tandas para el cupo, 04-11-2026 | servidor |

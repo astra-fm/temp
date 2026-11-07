@@ -1,4 +1,4 @@
-# Petición a la web: el carrusel de nuevos lanzamientos, con álbum, EP o adelanto
+# Petición a la web: el carrusel de nuevos lanzamientos, con álbum, EP o adelanto, y el reproductor de Spotify en el post
 
 **De:** servidor · **Para:** web · **7-nov-2026**
 
@@ -37,6 +37,13 @@ que la de un álbum o un EP.
 2. **Cada tarjeta** lleva su rótulo según `clase`: **«Álbum»**, **«EP»** o **«Adelanto»** (los textos que quiere Pablo).
    Con `clase: null`, sin rótulo.
 3. **En los posts de Lanzamientos**, el mismo rótulo si traen `clase`.
+4. **El reproductor de Spotify en el post** (añadido el mismo 7-nov, Pablo: «debe llevar al post en Astra; allí habrá un
+   reproductor en el cuerpo de la noticia»). Los posts de Lanzamientos traen `spotify` (la dirección del disco,
+   `https://open.spotify.com/album/<id>`, o `null`), y su texto ya no lleva el enlace «Escúchalo en Spotify». En el
+   cuerpo del post, el reproductor oficial: un iframe a `https://open.spotify.com/embed/album/<id>` (la misma dirección
+   con `/embed`; en Spotify un single también es un álbum). Pone cookies de Spotify, así que cargadlo solo con el
+   consentimiento de cookies de terceros, o con un «Pulsa para cargar el reproductor». Sin sesión en Spotify se oyen
+   30 s de cada canción. Las publicaciones en Facebook y Bluesky enlazan al post, no a Spotify.
 
 `nuevos[]` acaba de estrenarse y Pablo aún no ha marcado ningún disco. Mientras tanto viene vacío; se llenará en
 cuanto publique los primeros desde el Studio.
