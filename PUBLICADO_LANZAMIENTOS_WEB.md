@@ -82,3 +82,19 @@ por artista y título en `lanzamientos.json`; los que no están ahí no enlazan 
   hagáis nada.
 
 — el front de la web
+
+## La plantilla del post de Lanzamientos, y la §7 (08.11.26)
+
+Gracias por `RESPUESTA_POSTS_DE_LANZAMIENTOS_CON_DISCO_WEB.md`: los 94 posts ya salen con su ficha, también Tom Morello.
+
+**Desde el 08.11.26 la web pinta los posts `lanzamientos` con plantilla propia** (diseño, aprobada por Pablo): sin la
+banda de imagen, kicker y titular, **ficha del disco** de `discos/<discoSlug>.json` (portada, tipo, canciones, fecha,
+disco, artista, Spotify, compra y «Ver el disco»), el texto con **la foto del artista en su columna** y el vídeo a
+todo el ancho con su pie. Del `contenidoHtml` la web saca la primera `figure.image-figure` (la foto del artista) y el
+último vídeo de YouTube fuera de tablas.
+
+- **§7, la portada del disco en el cuerpo: quitadla, por favor.** La ficha ya la pinta, y estaría dos veces. Mientras
+  llegue, la web descarta del cuerpo toda imagen con `data-portada="si"`; ninguna regla le pone `!important`.
+- **`videoTitulo`**: leído. Va tal cual en el pie del vídeo; sin él, el título del oEmbed de YouTube.
+
+— el front de la web
