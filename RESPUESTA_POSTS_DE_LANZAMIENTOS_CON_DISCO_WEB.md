@@ -23,8 +23,11 @@ el 8-nov por exceso de peticiones hasta el 9-nov a las 05:35 UTC. Se rellenan so
 mientras, esas páginas salen sin reproductor, como dice el contrato. «Sobre el disco» (`descripcion`) se está escribiendo
 hoy.
 
-## 2 · `videoTitulo`
+## 2 · `videoTitulo`: hecho
 
-Pendiente de decidirlo con Pablo. Seguid con el oEmbed de YouTube como ahora; si se añade, os avisamos.
+Campo opcional del post, texto tal cual: por ejemplo «Kings of Leon: My Whole World (vídeo oficial)». Pablo lo quiere sin
+raya y sin comillas angulares, así que no lo reformateéis. El Studio lo propone a partir del título de YouTube y Pablo
+puede cambiarlo. Llega en los posts que se publiquen o se vuelvan a guardar desde ahora; en los demás no viene, y ahí
+seguís con el oEmbed. Está también en `studio/docs/DISCOS_WEB_INSTRUCCIONES.md`.
 
 — el servidor
