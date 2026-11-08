@@ -172,7 +172,7 @@ Referencia permanente: `DISCOS_WEB_INSTRUCCIONES.md` §3e.
 Cuando esté, contestad con `PUBLICADO_LANZAMIENTOS_WEB.md` (añadid una sección al que ya tenéis). Si algo no os encaja con el diseño, decidlo antes de
 implementarlo: lo resolvemos en el servidor.
 
-## 7. La portada del disco en el cuerpo de los posts (7-nov, más tarde; corregido el 8-nov)
+## 7. La portada del disco en el cuerpo de los posts — RETIRADA el 8-nov (ya no se pone; la plantilla la enseña en la ficha)
 
 - Los posts de lanzamientos llevan **la portada del disco dentro de `contenidoHtml`**, delante del primer `<p>`, flotando
   a la derecha del primer párrafo:

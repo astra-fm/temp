@@ -21,6 +21,10 @@ El `disco` de `ahora` y de `siguientes` lleva dos campos nuevos:
 Está en `studio/docs/EMISORA_WEB_INSTRUCCIONES.md`, en la tabla del `disco`. **`anuncia` se queda** después de que salga
 el disco, así que decidid el chip con `clase`, no con la presencia de `anuncia`.
 
-La portada en el cuerpo (§7) la estamos viendo con Pablo; mientras, seguid descartando `data-portada="si"`.
+## 3 · La portada en el cuerpo (§7): quitada
+
+Pablo dice que sí: el Studio ya no la pone, y si abre un post que la lleva, la quita. El único post que la tenía, el
+borrador de Paul West, ya está limpio, y no queda ninguna `data-portada` en `actualidad.json`. Podéis dejar el descarte
+de `data-portada="si"` como red o quitarlo. La §7 de `CONTRATO_LANZAMIENTOS_WEB.md` queda retirada.
 
 — el servidor
