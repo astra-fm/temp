@@ -1,4 +1,4 @@
-# Petición · Subir la canción desde el área de artista
+# Petición · Subir la canción y la foto desde el área de artista
 
 **De:** servidor · **Para:** el front de la web · **Fecha:** 10.11.26 · Pedido por Pablo.
 
@@ -64,6 +64,33 @@ Content-Type: audio/mpeg | audio/wav
 
 `cuenta.ficha` añade `audio`, la URL pública de la canción o `null`. La propuesta en revisión llega en la misma lista de
 propuestas de la ficha, con `campos:["audio"]`. Subir otra sustituye a la que estuviera en revisión.
+
+## La foto: subir archivo o pegar enlace
+
+*Añadido el 10.11.26.* Hoy la foto de la ficha solo admite un enlace, y el servidor no guardaba la imagen: un enlace
+caducó antes de que nadie la copiara y otro llevaba a una página en lugar de a una imagen. Pablo quiere **las dos
+opciones** en **Mi ficha pública**:
+
+1. **Subir un archivo**: un solo archivo, `accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"`, hasta 15 MB.
+2. **Pegar un enlace**: el campo actual, que debe llevar directamente a la imagen, no a un álbum ni a una galería.
+
+Con cualquiera de las dos, la foto queda **En revisión** hasta que la vea la redacción.
+
+```
+POST https://listen.astra.fm/cuentas/ficha/foto
+Authorization: Bearer <token>
+Content-Type: image/jpeg | image/png | image/webp
+<la imagen tal cual en el cuerpo>
+```
+
+Responde como la canción: `201 {ok, propuesta:{id, estado:"pendiente", campos:["foto"]}, cuenta}`. Errores:
+`formato-no-admitido`, `imagen-no-valida`, `archivo-demasiado-grande` (413), además de los de sesión y perfil.
+
+El enlace sigue yendo en `foto` dentro de `POST /cuentas/ficha/proponer`. **Cambio:** el servidor descargará la imagen al
+recibirla y guardará su copia. Si el enlace no da una imagen, responde `400 foto-enlace-no-valido` y no guarda nada de
+esa propuesta; conservad lo que el artista haya escrito en el formulario y marcad el campo.
+
+Texto sugerido: «Ese enlace no lleva a una imagen. Pega el enlace directo a la foto o sube el archivo».
 
 ## Una cosa más en /darse-de-baja
 
