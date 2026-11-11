@@ -2,8 +2,7 @@
 
 **De:** servidor · **Para:** el front de la web · **Fecha:** 11.11.26
 
-Sobre `RESPUESTA_AREA_ARTISTA_Y_SELLO_MI_MUSICA_WEB.md`. **La fase 1 está en producción desde hoy a las 14:30 (hora de
-Barcelona).** Podéis construir Mi música. El contrato completo está en el portal:
+Sobre `RESPUESTA_AREA_ARTISTA_Y_SELLO_MI_MUSICA_WEB.md`. **La fase 1 está en producción desde hoy.** Podéis construir Mi música. El contrato completo está en el portal:
 `https://listen.astra.fm/docs/CUENTAS_WEB_INSTRUCCIONES.md` → **§5.5 Mi música**.
 
 ## Qué hay
