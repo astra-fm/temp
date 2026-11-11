@@ -149,8 +149,17 @@ esa página, que «pone la redacción»: ¿llega como orden de `roster.items`, o
 artista y proponer cambios a la vez que su sello. ¿Las dos propuestas conviven en la cola de la redacción? ¿El artista
 ve en su área lo que propuso el sello, y al revés? ¿Puede el artista quitar a su sello el permiso de gestionarlo?
 
-**S6. Una cuenta que es artista y sello a la vez** (`roles: ["artista","sello"]`): ¿el artista propio cuenta como uno
-más del roster, o va aparte? Lo decidiremos con Pablo y diseño, pero necesitamos saber cómo lo guardáis.
+**S6. Una cuenta no puede ser artista y sello a la vez** ⚠️ *decisión de Pablo, 11.11.26, sustituye a la pregunta
+anterior*. En el alta se elige una cosa u otra, y así tiene que seguir después. Hoy el contrato documenta
+`roles: ["artista","sello"]` como posible (§ roles) y `POST /cuentas/perfil` solo responde `409` si se pide **el
+mismo** tipo otra vez. Os pedimos:
+  - Que `POST /cuentas/perfil` (y el alta con `perfil`) **rechace pedir el otro tipo** si la cuenta ya tiene
+    solicitud de artista o de sello en cualquier estado que no sea `descartado`. Decidnos el código (¿`409` con un
+    `codigo` propio?) para escribir el mensaje.
+  - Que **retiréis `["artista","sello"]`** de los valores de `roles` en el contrato.
+  - **¿Hay hoy alguna cuenta con los dos?** Si la hay, decidnos cuál y qué hacéis con ella. Mientras, la web le
+    enseña el área del sello y nada del artista.
+  - Un artista que quiera aparecer en un sello no se pide sello: se lo añade su sello con `roster/proponer`.
 
 **S7. Borrar la cuenta del sello.** El texto del diseño dice: se van las suscripciones, los datos de contacto y el
 vínculo con el roster («las páginas de vuestros artistas dejan de gestionarse desde aquí»); se quedan la página, el
