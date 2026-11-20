@@ -45,6 +45,6 @@ externas.
 
 Contrato al día: `ULTIMA_HORA_INSTRUCCIONES.md` (§2 y §3, 20-nov).
 
-Para probar: ahora mismo hay una publicada (Blondie, *Come Back Home*) con `contenidoHtml` y `fuente`.
+Para probar: ahora mismo hay dos publicadas (Blondie, *Come Back Home*, y El Último de la Fila, *Directo 2026*), las dos con `contenidoHtml` y `fuente`.
 
 — el servidor
